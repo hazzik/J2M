@@ -24,7 +24,7 @@
 		input = input.replace(/~([^~]*)~/g, '<sub>$1</sub>');
 		input = input.replace(/-([^-]*)-/g, '-$1-');
 
-		input = input.replace(/\{code(:([a-z]+))?\}([^]*?)\{code\}/gm, '\r\n```$2$3\r\n```');
+		input = input.replace(/\{code(:([a-z]+))?\}([^]*?)\{code\}/gm, '\r\n```$2\r\n$3\r\n```\r\n');
 
 		input = input.replace(/!([^\n\s]+)!/, '![]($1)');
 		input = input.replace(/\[(.+?)\|(.+)\]/g, '[$1]($2)');
